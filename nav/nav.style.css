@@ -1,0 +1,15 @@
+header div.jumbotron {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('');
+    height: 500px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+
+nav .navbar,
+header nav ul li a {
+    background-color: transparent;
+}
