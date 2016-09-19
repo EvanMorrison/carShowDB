@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-2">
+            <h1> <small>Welcome to the</small>
+                <p>CarView Project</p>
+            </h1>
+            <hr/>
+        </div>
+        <!--/col-->
+    </div>
+    <!--row-->
+
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-2">
+            <select class="form-control" ng-model="make" ng-options="make as make.name for make in makes" ng-change="showModels(make)">
+            </select >
+        </div>  <!--/col-->
+    </div> <!--/row-->
+
+            
+</div> <!--/container-->

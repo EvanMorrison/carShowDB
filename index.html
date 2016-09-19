@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Car Show DB</title>
 
+    <!--REQUIRED BY LICENSING REQUIREMENTS FOR USE OF EDMUNDS.COM ARTICLES-->
+    <link href="/{{edmundsReviewsUrl}}" rel="canonical">
+
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet">
 
@@ -25,9 +28,7 @@
 </head>
 
 <body>
-    <header>
-        <nav-bar></nav-bar>
-    </header>
+
     <main>
         <div ng-view></div>
     </main>
@@ -42,11 +43,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <!-- local js -->
     <script src="./app.js"></script>
+    <script src="./main/main.ctrl.js"></script>
     <script src="./services/httpService.js"></script>
     <script src="./nav/nav.dir.js"></script>
-    <script src="./compare/compare.ctl.js"></script>
-    <script src="./favorites/favorites.ctl.js"></script>
-    <script src="./about/about.ctl.js"></script>
+    <script src="./services/dataService.js"></script>
+    <script src="./modelList/compare.ctrl.js"></script>
+    <script src="./modelView/favorites.ctrl.js"></script>
+    <script src="./directives/header.dir.js"></script>
+    <script src="./about/about.ctrl.js"></script>
 
 </body>
 

@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <brand-header></brand-header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#/">Select Make</a>
+                </li>
+                <li class="active">Model List</li>
+            </ol>
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{{make.name}}</h1>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"> {{title}}
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-striped table-responsive">
+                                <tbody>
+                                    <tr class="" ng-repeat="m in make.models">
+                                        <td>
+                                            <a href="#model-info/{{m.niceName}}/{{m.years[m.years.length-1].year}}">{{m.name}}</a>
+                                        </td>
+
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-xs dropdown-toggle" type="button" id="yearSelector" data-toggle="dropdown">
+                                                    <span ng-repeat="yr in m.years" ng-if="$first || $last" >{{yr.year}}<span ng-if="$first && m.years.length> 1"> - </span></span> <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li ng-repeat="yr in m.years | orderBy:yr:reverse=true"><a href="#model-info/{{m.niceName}}/{{yr.year}}">{{yr.year}}</a></li>
+                                                </ul>
+                                            </div>
+
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--/ panel body-->
+                    </div>
+                    <!--/panel-->
+                </div>
+                <!--/col-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->

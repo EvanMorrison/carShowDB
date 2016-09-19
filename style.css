@@ -1,4 +1,14 @@
-body {
-
+main {
+    margin-top: 50px;
 }
 
+main h1 {
+    font-family: Montserrat;
+}
+
+
+/*@media (max-width: 768px) {
+    main {
+        margin-top: 250px;
+    }
+}*/

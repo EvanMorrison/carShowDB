@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <brand-header></brand-header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#/">Select Make</a>
+                </li>
+                <li><a href="#/models/{{make.id}}">Model List</a></li>
+                <li class="active">
+                    Model Profile
+                </li>
+            </ol>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="row">
+                <h3 class="text-center">{{year}} {{make | uppercase}} {{model | uppercase}}</h3>
+                <!--<div style="height: 305px">
+                    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                            <img ng-src="{{slide.image}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                                <h4>Slide {{slide.id}}</h4>
+                                <p>{{slide.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--/ng-controller-->
+
+                <img src="{{slides}}" class="img-thumbnail img-responsive center-block" alt="">
+                <p>{{editorial.metaDescription}}</p>
+                <p>{{editorial.edmundsSays | htmlToText}}</p>
+                <p>{{editorial.whatsNew | htmlToText}}</p>
+                <a href="{{editorial.link}}">{{editorial.link}}</a>
+
+            </div>
+            <footer style="height:80px"></footer>
+        </div>
+    </div>
